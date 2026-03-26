@@ -1,0 +1,16 @@
+{
+    "liveServer.settings.port": 5501,
+    "indenticator.color.active0": "#FF0000",
+    "indenticator.color.active1": "#00FF00",
+    "indenticator.color.active2": "#0000FF",
+    "indenticator.color.active3": "#FFFF00",
+    "indenticator.color.active4": "#FF00FF",
+    "indenticator.color.active5": "#00FFFF",
+    "indenticator.color.active6": "#800000",
+    "indenticator.color.active7": "#008000",
+    "indenticator.color.active8": "#000080",
+    "indenticator.color.active9": "#808000",
+    "indenticator.color.active10": "#800080",
+    "indenticator.showCurrentDepthInStatusBar": true,
+    "indenticator.showIndentGuideInOverviewRuler": true
+}
