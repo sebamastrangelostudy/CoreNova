@@ -1,354 +1,177 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CORANOVA ARCHITECT</title>
+    <title>CoraNova - Inicio</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    />
+    <!-- link css -->
     <link rel="stylesheet" href="CSS/index.css" />
-  </head>
 
-  <body class="theme-dark tech-background">
-    <header class="header">
+    <!-- icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet" />
+  </head>
+  
+  <body>
+    <header>
       <nav class="navbar">
-        <div class="navbar__logo">
+        <div class="container__navbar-logo">
           <span class="navbar__logo-accent"></span>
-          CoraNova
+          <h1>CoraNova</h1>
         </div>
 
         <div class="navbar__links">
-          <a href="#" class="navbar__link navbar__link--active">Inicio</a>
-          <a href="./pages/catalogo.html" class="navbar__link">Catálogo</a>
-          <a href="#" class="navbar__link">Cotizador</a>
-          <a href="#" class="navbar__link">Mis Presupuestos</a>
+          <ul>
+            <li>
+              <a href="index.html" class="link__active">Inicio</a>
+            </li>
+            <li><a href="../CoreNova/pages/catalogo.html">Catálogo</a></li>
+            <li><a href="#">Mis Presupuestos</a></li>
+          </ul>
         </div>
 
-        <div class="navbar__actions">
-          <button class="navbar__action-btn">
-            <span class="material-symbols-outlined">search</span>
+        <div class="navbar__btn-actions">
+          <button class="iconSearch">
+            <i class="bi bi-search"></i>
           </button>
-          <button class="navbar__action-btn navbar__action-btn--cart">
-            <span class="material-symbols-outlined">shopping_cart</span>
+
+          <button class="iconLogin-person">
+            <i class="bi bi-person"></i>
           </button>
-          <button class="btn btn--outline-primary btn--sm">Login</button>
         </div>
       </nav>
     </header>
 
-    <main class="main-content">
-      <section class="hero">
-        <div class="container hero__grid">
-          <div class="hero__info">
-            <div class="status-badge">
-              <span class="status-badge__dot-container">
-                <span class="status-badge__ping"></span>
-                <span class="status-badge__dot"></span>
-              </span>
-              <span class="status-badge__text">SYSTEM READY // OPTIMIZED</span>
-            </div>
+    <main>
+      <section class="content_principal">
+        <h2 class="content_principal-tittle">Bienvenido a CoraNova</h2>
+        <p class="content_principal-descrip">En CoraNova, diseñamos estaciones de trabajo y ecosistemas de hardware  que desafían los límites del silicio estándar. Mediante protocolos de overclocking profesional y gestión térmica avanzada, transformamos  componentes de élite en herramientas de precisión absoluta para flujos de trabajo de alta demanda.</p>
 
-            <h1 class="hero__title">
-              CoraNova <br />
-              <span class="hero__title--highlight">ARQUICHITEC</span>
-            </h1>
+        <div class="container__btn-coti-catalog">
+          <button class="btn-startquoting">
+            <a href="#">Empezar a cotizar</a>
+          </button>
 
-            <p class="hero__description">
-              Diseñamos el hardware del futuro con precisión de laboratorio.
-              Configura tu setup definitivo bajo estándares de overclocking
-              profesional.
-            </p>
-
-            <div class="hero__buttons">
-              <button class="btn btn--primary btn--lg">
-                Empezar a Cotizar
-              </button>
-              <button class="btn btn--glass btn--lg">Ver Catálogo</button>
-            </div>
-          </div>
-
-          <div class="hero__visual">
-            <div class="hero__glow"></div>
-            <div class="hero__image-wrapper">
-              <img
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQpb6F-_v9yhOmoy0AxXd0kiemVfSTCvHmtpTH10CH_z0hXkhxxOwzlC0-VHZElyyEUrCzunogG8HtJ-jUm-MLwtZ1Zp_c6ZKaIa7TD95ZAMYmxmGsfbZASW47-jqOwFjJC-VOS0pZMjCCHp9fvG8I1pGttunAvkEClfA4Lwp-iUFAWLDIGMT9eya17mp-jHRTqarPm9EIqn9Nudv9s_14YlIo0jlXKUIQLq-7_sdk4xc-lGKScvt26TGTj_2NYBA5foIRm4I-1Qs"
-                alt="High-end PC Architecture"
-                class="hero__image"
-              />
-            </div>
-
-            <div class="stats-card">
-              <div class="stat-item">
-                <div class="stat-item__icon stat-item__icon--primary">
-                  <span class="material-symbols-outlined">memory</span>
-                </div>
-                <div class="stat-item__data">
-                  <p class="stat-item__label">SYSTEM LOAD</p>
-                  <div class="stat-item__progress-bar">
-                    <div
-                      class="stat-item__progress-fill"
-                      style="width: 78%"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="stat-item">
-                <div class="stat-item__icon stat-item__icon--secondary">
-                  <span class="material-symbols-outlined">thermostat</span>
-                </div>
-                <div class="stat-item__data">
-                  <p class="stat-item__label">TEMP STABLE</p>
-                  <p class="stat-item__value">
-                    32°C
-                    <span class="stat-item__value-unit">LIQUID COOLED</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="btn-seecatalog">
+            <a href="#">Ver Catálogo</a>
+          </button>
         </div>
       </section>
+
 
       <section class="features">
         <div class="container">
           <div class="features__header">
             <div class="features__title-block">
-              <p class="features__subtitle">CORANOVA ARCHITECT LABS</p>
-              <h2 class="features__title">
-                EL ESTÁNDAR DE
-                <span class="features__title--highlight"
-                  >AUTORIDAD TÉCNICA</span
-                >
-              </h2>
+              <h2 class="features__title"> EL ESTÁNDAR DE <span class="features__title--highlight">AUTORIDAD TÉCNICA</span> </h2>
             </div>
-            <span class="features__watermark">01</span>
+            <span class="features__numOne">01</span>
           </div>
 
           <div class="features__grid">
             <article class="feature-card">
               <div class="feature-card__bg-icon">
-                <span class="material-symbols-outlined">bolt</span>
+                <i class="bi bi-lightning-charge"></i>
               </div>
-              <span class="material-symbols-outlined feature-card__icon"
-                >bolt</span
-              >
-              <h3 class="feature-card__title">
-                ALGORITMOS <br />
-                NOVA-SYNC
-              </h3>
-              <p class="feature-card__description">
-                Verificación automatizada que garantizan la compatibilidad de
-                componentes mediante el análisis dinámico de potencia y espacio.
-              </p>
+              <i class="bi bi-lightning-charge"></i>
+              <h3 class="feature-card__title"> ALGORITMOS <br /> NOVA-SYNC </h3>
+              <p class="feature-card__description">Verificación automatizada que garantizan la compatibilidad de componentes mediante el análisis dinámico de potencia y espacio.</p>
               <div class="feature-card__animated-border"></div>
             </article>
 
             <article class="feature-card">
               <div class="feature-card__bg-icon">
-                <span class="material-symbols-outlined">verified_user</span>
+                <i class="bi bi-shield-check"></i>
               </div>
-              <span class="material-symbols-outlined feature-card__icon"
-                >verified_user</span
-              >
-              <h3 class="feature-card__title">
-                STOCK <br />
-                CERTIFICADO
-              </h3>
-              <p class="feature-card__description">
-                Conexión directa con los laboratorios de los fabricantes más
-                importantes. Si está en nuestro catálogo, está listo para vos.
-              </p>
+              <i class="bi bi-shield-check"></i>
+              <h3 class="feature-card__title">STOCK <br /> CERTIFICADO</h3>
+              <p class="feature-card__description">Conexión directa con los laboratorios de los fabricantes más importantes. Si está en nuestro catálogo, está listo para vos.</p>
               <div class="feature-card__animated-border"></div>
             </article>
 
             <article class="feature-card">
               <div class="feature-card__bg-icon">
-                <span class="material-symbols-outlined">file_export</span>
+                <i class="bi bi-filetype-pdf"></i>
               </div>
-              <span class="material-symbols-outlined feature-card__icon"
-                >file_export</span
-              >
-              <h3 class="feature-card__title">
-                DESPLIEGUE <br />
-                PDF PRO
-              </h3>
-              <p class="feature-card__description">
-                Exporta planos técnicos de tu construcción, listados de piezas y
-                presupuestos en un formato profesional y corporativo.
-              </p>
+
+              <i class="bi bi-filetype-pdf"></i>
+
+              <h3 class="feature-card__title">DESPLIEGUE <br /> PDF</h3>
+              <p class="feature-card__description">Exporta planos técnicos de tu construcción, listados de piezas y presupuestos en un formato profesional y corporativo.</p>
               <div class="feature-card__animated-border"></div>
             </article>
           </div>
+
+
         </div>
       </section>
 
       <section class="catalog">
-        <div class="container">
-          <div class="catalog__header">
-            <div>
-              <p class="catalog__subtitle">RAW POWER // RECIÉN LLEGADOS</p>
-              <h2 class="catalog__title">
-                COMPONENTES DE <br />ARQUITECTURA CRÍTICA
-              </h2>
-            </div>
-            <a href="#" class="catalog__link">
-              CATÁLOGO COMPLETO
-              <span class="material-symbols-outlined">arrow_right_alt</span>
-            </a>
+
+        <div class="container__catalog">
+
+          <div class="container__catalog-tittle">
+            <h2 class="catalog__tittle">CATALOGOS DE COMPONENTES</h2>
           </div>
 
           <div class="catalog__grid">
-            <div class="product-card">
-              <div class="product-card__visual">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgF-g_HVmSYy3nvpzbTbXYWHyV9AOWglxYMPqUZLMYgOfhcS9yRFr62gYF9hkL4rAHdCifLbj8YoAqUns-KZMxKodCNq3czE3RoLxPWqIaAup7jlsqrC_ElIJYM1cDptqlRyQ9h4bfJJP8LlPZFWMkQV6fmxE_anu_ctQW_RTeqpTOBQ_decMCacKRCKLVHDiQJtdb292trGyqKHKZs1rFVTKDZKG4EBt8q_bCRhODl1lUK1j46mYLh1shxTmEiTLa-ll6_bRmfC4"
-                  alt="NVIDIA GPU"
-                  class="product-card__image"
-                />
-                <div class="product-card__badge">En Stock Inmediato</div>
-              </div>
-              <p class="product-card__category">GRAPHICS CARD</p>
-              <h4 class="product-card__name">RTX 4090 PHANTOM BLACK</h4>
-              <div class="product-card__tags">
-                <span class="product-card__tag">24GB VRAM</span>
-                <span class="product-card__tag">DLSS 3.5</span>
-              </div>
-              <div class="product-card__footer">
-                <span class="product-card__price">$1,599.00</span>
-                <button class="product-card__add-btn">
-                  <span class="material-symbols-outlined">add</span>
-                </button>
-              </div>
-            </div>
+            <!-- <article class="catalog__card">
+              <p class="product__card-textcategory">PROCESADOR</p>
+              <img src="assets/CORE i9.png" alt="CORE I9-14900K" class="catalog__card-img" />
+              <h3 class="catalog__card-title">CORE I9-14900K LGA1700</h3>
+            </article>
 
-            <div class="product-card">
-              <div class="product-card__visual">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1Qms9bwTtl3ng7ll2bkJ13-toqgLWwaeY66uevUZgNwYzII0VgRrwAPx9P46e531ZYGyZbZi0mYrsf435rhMH5n8ocrPxZkg6PpPCKfblTEWOIyLMaVzL5DQRwwcEHTr4ykp-rNbE_yAw51NSOQE7ONuZpufslcRm-QqFI1qPz-0x59QuazqnfEAnqrGqnq0QsBTaXfD_H7l2gHM_VGqD2I7GUZMFXAE-_b00pTLRrnZNmda68Idii4tiYMCPnaTE6BSWZ1_CSRs"
-                  alt="Intel CPU"
-                  class="product-card__image"
-                />
-              </div>
-              <p class="product-card__category">PROCESSOR</p>
-              <h4 class="product-card__name">CORE i9-14900K UNLOCKED</h4>
-              <div class="product-card__tags">
-                <span class="product-card__tag">24 CORES</span>
-                <span class="product-card__tag">6.0GHZ</span>
-              </div>
-              <div class="product-card__footer">
-                <span class="product-card__price">$589.00</span>
-                <button class="product-card__add-btn">
-                  <span class="material-symbols-outlined">add</span>
-                </button>
-              </div>
-            </div>
+            <article class="catalog__card">
+              <p class="product__card-textcategory">TARJETA GRÁFICA</p>
 
-            <div class="product-card">
-              <div class="product-card__visual">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5BZpI9BzXB82a029qBDJY072Ysu6_e-E8PvRBkS-3tNK1wzwP5WeFpaBMaxJCJPyduAtuKX3sUXAjUFGLJfIIyIG9Oz2CyGQExvz4q8rlb0OvqfCuPHGyR18hX3nB8gsGja9bubixgbUbiUOx9fPE-fPp0swEOBL9YAWGFVxm5cGqMF_NXHlP9gpYO_Jf98DdwGR89WGy4ljfRB5Ak9pqGtZXJSOUesNMNx7P4fMPpvshmK6e21AjkfXHSw14CjF6eq1ZBnYFb2U"
-                  alt="DDR5 Memory"
-                  class="product-card__image"
-                />
-              </div>
-              <p class="product-card__category">MEMORY</p>
-              <h4 class="product-card__name">DOMINATOR DDR5 64GB</h4>
-              <div class="product-card__tags">
-                <span class="product-card__tag">6400MT/S</span>
-                <span class="product-card__tag">RGB SYNC</span>
-              </div>
-              <div class="product-card__footer">
-                <span class="product-card__price">$244.00</span>
-                <button class="product-card__add-btn">
-                  <span class="material-symbols-outlined">add</span>
-                </button>
-              </div>
-            </div>
+              <img src="assets/RTX.png" alt="RTX 4090 PHANTOM" class="catalog__card-img" />
+              <h3 class="catalog__card-title">RTX 4090 PHANTOM</h3>
+            </article>
 
-            <div class="product-card">
-              <div class="product-card__visual">
-                <img
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDshpr9drskn7GC100NBrOtwWW0RNSDAfC1FhoOaj27f83TKF55VXcLzapSmUCkFjNcevu838AL6GNyEkI9mnB4A-ldVhq_QBZvNKlow4cZjYvefWRocGiWAnSQB6Q1wKInbaH7Vnc_c_a8SAdsikwKLGCTe7LXD701oBDlDYr4VbY0YzaESe9rHtBZj3uO7dKO2tWtRaF-B2Zc40JLiMq2KZeXDFKDYd6QSEuJ3ee9ykf4BLyfjZpZDSLT0u7ubsEGrx-1vrhB2yY"
-                  alt="Chassis"
-                  class="product-card__image"
-                />
-              </div>
-              <p class="product-card__category">CHASSIS</p>
-              <h4 class="product-card__name">O11 DYNAMIC EVO XL</h4>
-              <div class="product-card__tags">
-                <span class="product-card__tag">FULL TOWER</span>
-                <span class="product-card__tag">DUAL CHAMBER</span>
-              </div>
-              <div class="product-card__footer">
-                <span class="product-card__price">$244.00</span>
-                <button class="product-card__add-btn">
-                  <span class="material-symbols-outlined">add</span>
-                </button>
-              </div>
-            </div>
-          </div>
+            <article class="catalog__card">
+              <p class="product__card-textcategory">MEMORIA RAM</p>
+              <img src="assets/DOMINATOR DDR5.png" alt="DOMINATOR DDR5" class="catalog__card-img" />
+              <h3 class="catalog__card-title">DOMINATOR DDR5</h3>
+            </article>
+
+            <article class="catalog__card">
+              <p class="product__card-textcategory">PLACA MADRE</p>
+              <img src="assets/pacaBase.jpeg" alt="Placas Base" class="catalog__card-img" />
+              <h3 class="catalog__card-title">Motherboard B550m Ds3h Gigabyte Amd Am4</h3>
+            </article>
+
+            <article class="catalog__card">
+              <p class="product__card-textcategory">FUENTE DE PODER</p>
+              <img src="assets/fuentePoder.webp" alt="Fuentes de Poder" class="catalog__card-img" />
+              <h3 class="catalog__card-title">FUENTE GAMER SENTEY 850W 80 GOLD</h3>
+            </article> -->
         </div>
-      </section>
 
-      <section class="newsletter">
-        <div class="container">
-          <div class="newsletter__card">
-            <div class="newsletter__top-border"></div>
-
-            <div class="newsletter__content">
-              <p class="newsletter__subtitle">STAY OVERCLOCKED</p>
-              <h2 class="newsletter__title">
-                ÚNETE A LA VANGUARDIA <br />
-                DE HARDWARE
-              </h2>
-              <p class="newsletter__description">
-                Recibe reportes de laboratorio sobre nuevos componentes, guías
-                de optimización de bios y ofertas exclusivas para miembros NEO.
-              </p>
-
-              <form class="newsletter__form">
-                <input
-                  type="email"
-                  placeholder="DIRECCIÓN DE CORREO"
-                  class="newsletter__input"
-                  required
-                />
-                <button type="submit" class="btn btn--primary btn--lg">
-                  SUSCRIBIRME
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container footer__grid">
+      
+      <div class="container__general-footer">
+
+        <div class="container footer__grid">
+
         <div class="footer__brand">
+
           <div class="footer__logo">
             <span class="footer__logo-accent"></span>
-            CORANOVA ARCHITECT
+            <h3>CORANOVA ARCHITECT</h3>
           </div>
-          <p class="footer__about">
-            Autoridad técnica en hardware de alto rendimiento. Diseñamos,
-            optimizamos y entregamos la excelencia que los entusiastas demandan.
-          </p>
+
+          <p class="footer__about">Autoridad técnica en hardware de alto rendimiento. Diseñamos, optimizamos y entregamos la excelencia que los entusiastas demandan.</p>
 
           <div class="footer__socials">
-            <a href="#" class="footer__social-link"
-              ><span class="material-symbols-outlined">public</span></a
-            >
-            <a href="#" class="footer__social-link"
-              ><span class="material-symbols-outlined">share</span></a
-            >
-            <a href="#" class="footer__social-link"
-              ><span class="material-symbols-outlined">terminal</span></a
-            >
+            <a href="#" class="footer__social-link"><i class="bi bi-globe-americas"></i></a>
+            <a href="#" class="footer__social-link"><i class="bi bi-share"></i></a>
+            <a href="#" class="footer__social-link"><i class="bi bi-terminal"></i></a>
           </div>
         </div>
 
@@ -373,15 +196,20 @@
         </div>
       </div>
 
+      <div class="container__line-footer">
+        <hr class="line-footer">
+      </div>
+
       <div class="container footer__bottom">
-        <p class="footer__copyright">
-          © 2026 CORANOVA. ARCHITEC AUTHORITY // ALL RIGHTS RESERVED.
-        </p>
+        <p class="footer__copyright">© 2026 CORANOVA. ARCHITEC AUTHORITY / RESERVADOS TODOS LOS DERECHOS.</p>
         <div class="footer__legal">
           <a href="#" class="footer__legal-link">Política de Privacidad</a>
           <a href="#" class="footer__legal-link">Términos y condiciones</a>
         </div>
       </div>
+
+      </div>
+
     </footer>
   </body>
 </html>
