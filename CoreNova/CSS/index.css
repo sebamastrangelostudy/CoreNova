@@ -317,10 +317,15 @@ header{
 } 
 
 .feature-card__animated-border {
-    background: linear-gradient(90deg,transparent, var(--brand-glow), transparent);
+    background-color: var(--brand-glow);
     height: 2px;
     left: 1.5rem;
     position: absolute;
     right: 1.5rem;
     bottom: 1.5rem;
+}
+
+.feature-card:hover > .feature-card__animated-border {
+    background: linear-gradient(90deg, transparent, var(--brand-glow), transparent);
+    transition: 0.3s ease;
 }
