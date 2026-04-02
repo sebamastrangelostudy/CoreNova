@@ -145,3 +145,77 @@ header{
     background-color: rgba(0, 255, 255, 0.14);
     transform: translateY(-1px);
 }
+
+
+.content_principal {
+    background-image: linear-gradient(rgba(11, 15, 25, 0.7), rgba(11, 15, 25, 0.7)), url('/CoreNova/assets/v796-nunny-03b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 80vh; 
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.content_principal-tittle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.content_principal-descrip {
+    color: var(--text-dim);
+    font-size: 1rem;
+    line-height: 1.75;
+    margin: 0 auto 2rem;
+    max-width: 680px;
+}
+
+.btn-startquoting {
+    background-color: var(--brand-primary);
+    color: #ffffff;  
+    border: none;
+    border-radius: 999px;
+    display: inline-flex;
+    margin: 0 0.5rem;
+    overflow: hidden;
+    padding: 1.25rem 2.5rem;
+}
+
+.btn-startquoting:hover {
+    background-color:#004ea1;
+    box-shadow: 0 0 40px rgba(0, 123, 255, 0.5);
+    transform: translateY(-2px);
+    transition: 0.3s ease;
+    cursor: pointer;
+
+}
+
+.btn-seecatalog {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    display: inline-flex;
+    margin: 0 0.5rem;
+    overflow: hidden;
+    padding: 0;
+}
+
+.btn-seecatalog a {
+    color: var(--text-main);
+    display: inline-flex;
+    padding: 0.95rem 1.75rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-seecatalog:hover {
+    background-color: rgba(147, 147, 147, 0.196);
+    border: 1px solid rgba(255, 255, 255, 0.238);
+    transition: 0.3s ease;
+}
