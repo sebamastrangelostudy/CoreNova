@@ -329,3 +329,115 @@ header{
     background: linear-gradient(90deg, transparent, var(--brand-glow), transparent);
     transition: 0.3s ease;
 }
+
+
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 2rem 2rem 3rem;
+}
+
+.footer__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.footer__brand {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer__logo {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+    font-family: var(--font-header);
+    font-size: 1rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.footer__about {
+    color: var(--text-dim);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    color: var(--text-main);
+}
+
+.footer__social-link:hover {
+    background-color: #007bff;
+    transition: 0.3s ease;
+}
+
+.footer__nav-group {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.footer__title {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.footer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__link, .footer__legal-link {
+    color: var(--text-dim);
+    display: inline-block;
+    font-size: 0.95rem;
+    margin-bottom: 0.7rem;
+    transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+    color: white;
+    transition: 0.2s ease;
+}
+
+ .footer__legal-link:hover{
+    color: white;
+    transition: 0.2s ease;
+    text-decoration: underline;
+ }
+
+.footer__bottom {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.footer__copyright {
+    color: var(--text-dim);
+    margin: 0;
+}
+
+.footer__legal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
