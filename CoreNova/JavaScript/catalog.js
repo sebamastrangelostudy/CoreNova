@@ -1,4 +1,10 @@
 const containerComponents = document.getElementById("container-products");
+const filterButtons = document.querySelectorAll(".button-filters");
+const marcaButtons = document.querySelectorAll(".input-field");
+const searchbutton = document.getElementById("search");
+const cDiv = document.getElementById("coincidencias");
+const componentCarWidget = JSON.parse(localStorage.getItem("carrito")) ?? [];
+const componentProdI = document.getElementById("containerProd-i");
 
 class componentes {
   constructor(id, brand, model, category, price, tags, image) {
@@ -11,6 +17,61 @@ class componentes {
       (this.image = image));
   }
 }
+
+function clearAllFilters() {
+  filterButtons.forEach((btn) => {
+    btn.classList.remove("com-active");
+    btn.checked = false;
+  });
+  marcaButtons.forEach((btn) => {
+    btn.classList.remove("marca-active");
+    btn.checked = false;
+  });
+}
+
+marcaButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const isActive = button.classList.contains("marca-active");
+
+    clearAllFilters();
+
+    if (isActive) {
+      displayCatalogoDOM(catalogo);
+    } else {
+      button.classList.add("marca-active");
+      button.checked = true;
+
+      const selectedMarca = button.name.toUpperCase();
+      const filteredByMarca = catalogo.filter((item) =>
+        item.brand.toUpperCase().includes(selectedMarca),
+      );
+
+      displayCatalogoDOM(filteredByMarca);
+    }
+  });
+});
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const isActive = button.classList.contains("com-active");
+
+    clearAllFilters();
+
+    if (isActive) {
+      displayCatalogoDOM(catalogo);
+    } else {
+      button.classList.add("com-active");
+      button.checked = true;
+
+      const selectedCategory = button.innerText.toUpperCase();
+      const filteredByCategory = catalogo.filter((item) =>
+        item.category.toUpperCase().includes(selectedCategory),
+      );
+
+      displayCatalogoDOM(filteredByCategory);
+    }
+  });
+});
 
 let catalogo = [];
 const storageGuardado = localStorage.getItem("catalogo");
@@ -50,7 +111,9 @@ if (storageGuardado) {
     })
     .catch((error) => console.error("Error cargando el JSON:", error));
 }
-function mostrarCatalogoDOM(array) {
+
+
+function displayCatalogoDOM(array) {
   containerComponents.innerHTML = "";
   for (let component of array) {
     let componentNuevoDiv = document.createElement("div");
@@ -69,7 +132,7 @@ function mostrarCatalogoDOM(array) {
                     ${tagsHTML}
                  </div>
                       <h3 class="precio-box-1">$${component.price}</span></h3>
-                <button id="agregarBtn${component.id}"class="btn btn--primary btn--add ">
+                <button id="agregarBtn${component.id}"class="btn-startquoting btn--add">
                     <span class="material-symbols-outlined">
                         add_task
                     </span> Agregar al Presupuesto
@@ -79,5 +142,4 @@ function mostrarCatalogoDOM(array) {
     containerComponents.appendChild(componentNuevoDiv);
   }
 }
-console.log(catalogo);
-mostrarCatalogoDOM(catalogo);
+displayCatalogoDOM(catalogo);
