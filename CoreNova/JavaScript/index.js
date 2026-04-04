@@ -1,6 +1,21 @@
 const containerComponents = document.getElementById("container-products");
 const filterButtons = document.querySelectorAll(".button-filters");
 const marcaButtons = document.querySelectorAll(".input-field");
+const searchbutton = document.getElementById("search");
+const cDiv = document.getElementById("coincidencias");
+const componentCarWidget = JSON.parse(localStorage.getItem("carrito")) ?? [];
+
+class componentes {
+  constructor(id, brand, model, category, price, tags, image) {
+    ((this.id = id),
+      (this.brand = brand),
+      (this.model = model),
+      (this.category = category),
+      (this.price = price),
+      (this.tags = tags),
+      (this.image = image));
+  }
+}
 
 function clearAllFilters() {
   filterButtons.forEach((btn) => {
@@ -20,7 +35,7 @@ marcaButtons.forEach((button) => {
     clearAllFilters();
 
     if (isActive) {
-      displayCatalogDOM(catalogo);
+      displayCatalogoDOM(catalogo);
     } else {
       button.classList.add("marca-active");
       button.checked = true;
@@ -30,7 +45,7 @@ marcaButtons.forEach((button) => {
         item.brand.toUpperCase().includes(selectedMarca),
       );
 
-      displayCatalogDOM(filteredByMarca);
+      displayCatalogoDOM(filteredByMarca);
     }
   });
 });
@@ -42,7 +57,7 @@ filterButtons.forEach((button) => {
     clearAllFilters();
 
     if (isActive) {
-      displayCatalogDOM(catalogo);
+      displayCatalogoDOM(catalogo);
     } else {
       button.classList.add("com-active");
       button.checked = true;
@@ -52,53 +67,10 @@ filterButtons.forEach((button) => {
         item.category.toUpperCase().includes(selectedCategory),
       );
 
-      displayCatalogDOM(filteredByCategory);
+      displayCatalogoDOM(filteredByCategory);
     }
   });
 });
-function displayCatalogDOM(dataArray) {
-  containerComponents.innerHTML = "";
-
-  dataArray.forEach((component) => {
-    const productFilter = document.createElement("div");
-    productFilter.className = "producto";
-    productFilter.setAttribute("data-id", component.id);
-
-    const tagsHTML = component.tags
-      .map((tag) => `<span class="tag-badge">${tag}</span>`)
-      .join("");
-
-    productFilter.innerHTML = `
-   <div class="container-box-main">
-               <img class="img-components" src="${component.image}"/>
-               <div class="components-text">
-               <p>${component.category}/${component.brand}<p/>
-                <h2 class="title-box">${component.brand} ${component.model}</h2> 
-                <div class="container-tags">
-                    ${tagsHTML}
-                 </div>
-                      <h3 class="precio-box-1">$${component.price}</span></h3>
-                <button id="agregarBtn${component.id}"class="btn btn--primary btn--add ">
-                    <span class="material-symbols-outlined">
-                        add_task
-                    </span> Agregar al Presupuesto
-                </button>
-            </div>
-        `;
-    containerComponents.appendChild(productFilter);
-  });
-}
-class componentes {
-  constructor(id, brand, model, category, price, tags, image) {
-    ((this.id = id),
-      (this.brand = brand),
-      (this.model = model),
-      (this.category = category),
-      (this.price = price),
-      (this.tags = tags),
-      (this.image = image));
-  }
-}
 
 let catalogo = [];
 const storageGuardado = localStorage.getItem("catalogo");
@@ -157,7 +129,7 @@ function displayCatalogoDOM(array) {
                     ${tagsHTML}
                  </div>
                       <h3 class="precio-box-1">$${component.price}</span></h3>
-                <button id="agregarBtn${component.id}"class="btn btn--primary btn--add ">
+                <button id="agregarBtn${component.id}"class="btn-startquoting btn--add">
                     <span class="material-symbols-outlined">
                         add_task
                     </span> Agregar al Presupuesto
@@ -167,5 +139,20 @@ function displayCatalogoDOM(array) {
     containerComponents.appendChild(componentNuevoDiv);
   }
 }
-console.log(catalogo);
 displayCatalogoDOM(catalogo);
+
+function searchComponent(b, array) {
+  let c = array.filter((component) => {
+    return (
+      component.model.toUpperCase().includes(b.toUpperCase()) ||
+      component.brand.toUpperCase().includes(b.toUpperCase())
+    );
+  });
+  c.length > 0
+    ? (displayCatalogoDOM(c), (cDiv.innerHTML = ""))
+    : (displayCatalogoDOM(),
+      (cDiv.innerHTML = `<h3>No hay coincidencias con su búsqueda, este es nuestro catálogo completo</h3>`));
+}
+searchbutton.addEventListener("input", () => {
+  searchComponent(searchbutton.value, catalogo);
+});

@@ -5,8 +5,8 @@
 }
 
 body {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
+  background-color: var(--bg-main);
+  color: var(--text-main);
   font-family: var(--font-body);
   overflow-x: hidden;
 }
@@ -24,7 +24,7 @@ body {
 }
 .catalogo-text {
   h2 {
-    font-family: var(--font-headline);
+    font-family: var(--font-header);
     text-transform: uppercase;
     font-size: 2.4em;
     font-weight: 900;
@@ -79,7 +79,7 @@ body {
   gap: 25px;
   min-width: 15vw;
   padding: 30px 30px;
-  background-color: var(--bg-surface-highest);
+  background-color: var(--bg-card);
 }
 .top-filters {
   display: flex;
@@ -96,7 +96,7 @@ body {
 }
 .componentes-filters {
   h3 {
-    color: var(--primary);
+    color: var(--brand-primary);
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 0.125em;
@@ -104,7 +104,7 @@ body {
 }
 .container-marca {
   h3 {
-    color: var(--primary);
+    color: var(--brand-primary);
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 0.125em;
@@ -115,10 +115,10 @@ body {
   gap: 5px;
   margin-top: 10px;
   &&:hover {
-    color: var(--text-muted);
+    color: var(--text-dim);
   }
   h4 {
-    color: var(--text-muted);
+    color: var(--text-dim);
     font-weight: 500;
   }
   input {
@@ -131,7 +131,7 @@ body {
   .input-field {
     width: 15px;
     height: 15px;
-    border: 2px solid var(--border-subtle);
+    border: 2px solid var(--text-dim);
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -146,16 +146,16 @@ body {
       position: absolute;
       width: 7px;
       height: 7px;
-      background-color: var(--secondary);
+      background-color: #39ff14;
       border-radius: 50%;
       transform: scale(0);
       transition: transform 0.2s ease;
-      box-shadow: 0 0 8px var(--secondary);
+      box-shadow: 0 0 8px #39ff14;
     }
 
     &.marca-active,
     &:checked {
-      border-color: var(--secondary);
+      border-color: #39ff14;
 
       &::after {
         transform: scale(1);
@@ -165,7 +165,7 @@ body {
 
   &:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--brand-primary);
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
   }
   .input-field:hover:not(:checked) {
@@ -179,16 +179,16 @@ body {
   margin-top: 10px;
 
   .button-filters {
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--text-dim);
     background-color: transparent;
-    color: var(--text-muted);
+    color: var(--text-dim);
     font-weight: 500;
     padding: 5px 10px;
     cursor: pointer;
     transition: 0.3s;
 
     &:hover {
-      border: 1px solid var(--text-muted);
+      border: 1px solid var(--text-dim);
     }
 
     &.com-active {
@@ -263,12 +263,12 @@ body {
       transform: scale(1.2);
     }
     .components-text h2 {
-      color: var(--primary);
+      color: var(--brand-primary);
     }
   }
 }
 .components-text {
-  background-color: var(--bg-surface-low);
+  background-color: var(--bg-card);
   height: 100%;
   padding: 30px 10px;
   display: flex;
@@ -278,7 +278,7 @@ body {
   gap: 5px;
 
   p {
-    color: var(--primary);
+    color: var(--brand-primary);
     font-weight: 600;
     letter-spacing: 0.25em;
     font-size: 0.625em;
@@ -297,8 +297,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 8px 15px;
-  font-size: 0.6em;
+  font-size: 0.8em;
   gap: 10px;
-  font-weight: 800;
-  color: var(--bg-surface-highest);
+  font-weight: 700;
+  color: var(--bg-card);
+  font-family: var(--font-main);
+}
+.incorrect {
+  color: rgb(231, 1, 1);
 }
