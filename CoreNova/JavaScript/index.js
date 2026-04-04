@@ -3,7 +3,7 @@ const filterButtons = document.querySelectorAll(".button-filters");
 const marcaButtons = document.querySelectorAll(".input-field");
 const searchbutton = document.getElementById("search");
 const cDiv = document.getElementById("coincidencias");
-const componentCarWidget = JSON.parse(localStorage.getItem("carrito")) ?? [];
+const componentCarWidget = JSON.parse(localStorage.getItem("carWidget")) ?? [];
 
 class componentes {
   constructor(id, brand, model, category, price, tags, image) {
