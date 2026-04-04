@@ -112,7 +112,6 @@ if (storageGuardado) {
     .catch((error) => console.error("Error cargando el JSON:", error));
 }
 
-
 function displayCatalogoDOM(array) {
   containerComponents.innerHTML = "";
   for (let component of array) {
@@ -140,6 +139,60 @@ function displayCatalogoDOM(array) {
             </div>
         `;
     containerComponents.appendChild(componentNuevoDiv);
+    const addCarbtn = document.getElementById(`agregarBtn${component.id}`);
+    addCarbtn.addEventListener("click", () => {
+      addCar(component);
+    });
   }
 }
 displayCatalogoDOM(catalogo);
+
+function addCar(item) {
+  let cAdd = componentCarWidget.find((component) => component.id == item.id);
+  cAdd == undefined
+    ? (componentCarWidget.push(item),
+      Toastify({
+        text: "Se ha Agregado tu Producto Al Carrito",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () {},
+      }).showToast(),
+      localStorage.setItem("carrito", JSON.stringify(componentCarWidget)),
+      console.log(componentCarWidget))
+    : Toastify({
+        text: "Tu Producto ya se encuentra en el Carrito",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "top",
+        position: "right",
+        stopOnFocus: true,
+        style: {
+          background:
+            "linear-gradient((to right, rgb(255, 95, 109), rgb(255, 195, 113)))",
+        },
+        onClick: function () {},
+      }).showToast();
+}
+function searchComponent(b, array) {
+  let c = array.filter((component) => {
+    return (
+      component.model.toUpperCase().includes(b.toUpperCase()) ||
+      component.brand.toUpperCase().includes(b.toUpperCase())
+    );
+  });
+  c.length > 0
+    ? (displayCatalogoDOM(c), (cDiv.innerHTML = ""))
+    : (displayCatalogoDOM(),
+      (cDiv.innerHTML = `<h3>No hay coincidencias con su búsqueda, este es nuestro catálogo completo</h3>`));
+}
+searchbutton.addEventListener("input", () => {
+  searchComponent(searchbutton.value, catalogo);
+});
