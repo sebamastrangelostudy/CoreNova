@@ -169,3 +169,51 @@ function displayCatalogoDOM(array) {
 }
 console.log(catalogo);
 displayCatalogoDOM(catalogo);
+
+
+// const products = [
+//     {
+//         category: "PROCESADOR",
+//         title: "CORE I9-14900K LGA1700",
+//         img: "/src/assets/CORE i9.png",
+//         alt: "CORE I9-14900K"
+//     },
+//     {
+//         category: "TARJETA GRÁFICA",
+//         title: "RTX 4090 PHANTOM",
+//         img: "/src/assets/RTX.png",
+//         alt: "RTX 4090 PHANTOM"
+//     },
+//     {
+//         category: "MEMORIA RAM",
+//         title: "DOMINATOR DDR5",
+//         img: "/src/assets/DOMINATOR DDR5.png",
+//         alt: "DOMINATOR DDR5"
+//     },
+//     {
+//         category: "PLACA MADRE",
+//         title: "Motherboard B550m Ds3h Gigabyte Amd Am4",
+//         img: "/src/assets/pacaBase.jpeg",
+//         alt: "Placas Base"
+//     },
+//     {
+//         category: "FUENTE DE PODER",
+//         title: "FUENTE GAMER SENTEY 850W 80 GOLD",
+//         img: "/src/assets/fuente-gamerSentey850W.webp",
+//         alt: "Fuentes de Poder"
+//     }
+// ];
+
+// const productContainer = document.getElementById('product-container');
+
+// const renderCatalog = (items) => {
+//     productContainer.innerHTML = items.map(product => `
+//         <article class="catalog__card">
+//             <p class="product__card-textcategory">${product.category}</p>
+//             <img src="${product.img}" alt="${product.alt}" class="catalog__card-img" />
+//             <h3 class="catalog__card-title">${product.title}</h3>
+//         </article>
+//     `).join('');
+// };
+
+// renderCatalog(products);
