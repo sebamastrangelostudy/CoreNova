@@ -9,37 +9,52 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
+    <header>
       <nav class="navbar">
-        <div class="navbar__logo">
+        <div class="container__navbar-logo">
           <span class="navbar__logo-accent"></span>
-          CoraNova
+          <h1>CoraNova</h1>
         </div>
 
         <div class="navbar__links">
-          <a href="../index.html" class="navbar__link">Inicio</a>
-          <a href="./catalogo.html" class="navbar__link navbar__link--active"
-            >Catálogo</a
-          >
-          <a href="#" class="navbar__link">Cotizador</a>
-          <a href="#" class="navbar__link">Mis Presupuestos</a>
+          <ul>
+            <li>
+              <a href="../index.html" class="link__active">Inicio</a>
+            </li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="#">Mis Presupuestos</a></li>
+          </ul>
         </div>
 
-        <div class="navbar__actions">
-          <button class="navbar__action-btn">
-            <span class="material-symbols-outlined">search</span>
+        <div class="navbar__btn-actions">
+          <button class="iconSearch">
+            <i class="bi bi-search"></i>
           </button>
-          <button class="navbar__action-btn navbar__action-btn--cart">
-            <span class="material-symbols-outlined">shopping_cart</span>
+
+          <button class="iconLogin-person">
+            <i class="bi bi-person"></i>
           </button>
-          <button class="btn btn--outline-primary btn--sm">Login</button>
         </div>
       </nav>
     </header>
+
     <main>
       <section class="content-catalogo">
         <div class="top-catalogo">
@@ -48,7 +63,11 @@
             <p>Componentes de Grado Militar para Máximo Desempeño</p>
           </div>
           <div class="catalogo-search">
-            <input type="text" placeholder="BUSCAR COMPONETNES..." />
+            <input
+              id="search"
+              type="text"
+              placeholder="BUSCAR COMPONETNES..."
+            />
             <span class="material-symbols-outlined">search</span>
           </div>
         </div>
@@ -89,7 +108,10 @@
               </div>
             </div>
           </div>
-          <div id="container-products"></div>
+          <div id="container-products">
+            <div id="coincidencias" class=""></div>
+            <div class="producto"></div>
+          </div>
         </div>
       </section>
     </main>
