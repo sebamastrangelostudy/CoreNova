@@ -141,12 +141,39 @@ function displayCatalogoDOM(array) {
     containerComponents.appendChild(componentNuevoDiv);
     const addCarbtn = document.getElementById(`agregarBtn${component.id}`);
     addCarbtn.addEventListener("click", () => {
+      disabledCategory(component);
       addCar(component);
     });
   }
 }
 displayCatalogoDOM(catalogo);
 
+let blockedCategories = [];
+
+function disabledCategory(item) {
+  const categoryUpper = item.category.toUpperCase();
+
+  if (!blockedCategories.includes(categoryUpper)) {
+    blockedCategories.push(categoryUpper);
+  }
+
+  const filteredCatalog = catalogo.filter((component) => {
+    return !blockedCategories.includes(component.category.toUpperCase());
+  });
+  marcaButtons.forEach((button) => {
+    button.classList.add("category-disabled");
+    button.disabled = true;
+  });
+  displayCatalogoDOM(filteredCatalog);
+
+  filterButtons.forEach((button) => {
+    if (button.innerText.toUpperCase() === categoryUpper) {
+      button.classList.add("category-disabled");
+      button.disabled = true;
+      button.classList.remove("com-active");
+    }
+  });
+}
 function addCar(item) {
   let cAdd = componentCarWidget.find((component) => component.id == item.id);
   cAdd == undefined
@@ -180,6 +207,7 @@ function addCar(item) {
         },
         onClick: function () {},
       }).showToast();
+  // if(item.category)
 }
 function searchComponent(b, array) {
   let c = array.filter((component) => {

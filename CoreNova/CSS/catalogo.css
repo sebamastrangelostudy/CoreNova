@@ -37,11 +37,13 @@ body {
 .catalogo-search {
   display: flex;
   align-items: center;
+  border: 2px solid var(--bg-card);
   background-color: var(--bg-surface-highest);
   transition: all 0.1s ease-in-out;
   input {
     border: none;
     background-color: var(--bg-surface-highest);
+
     width: 250px;
     height: 35px;
     padding: 10px 10px;
@@ -198,6 +200,11 @@ body {
       font-weight: 700;
     }
   }
+}
+.category-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(1);
 }
 .status-available {
   color: #39ff14;
