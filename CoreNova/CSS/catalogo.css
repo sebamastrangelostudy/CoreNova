@@ -9,10 +9,11 @@ body {
   color: var(--text-main);
   font-family: var(--font-body);
   overflow-x: hidden;
+  /* background-image: url(/CoreNova/assets/); */
 }
 .content-catalogo {
   position: relative;
-  padding-top: 6rem;
+  padding: 6rem;
 }
 .top-catalogo {
   max-width: 1400px;
