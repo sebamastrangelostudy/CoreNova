@@ -2,7 +2,6 @@ const containerCar = document.getElementById("componentsCar");
 const containerResume = document.getElementById("priceCar");
 const carfetch = localStorage.getItem("carrito");
 const carArray = JSON.parse(carfetch);
-
 console.log(carArray);
 function displayCar(array) {
   containerCar.innerHTML = "";

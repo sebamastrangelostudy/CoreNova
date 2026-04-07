@@ -5,7 +5,6 @@ const searchbutton = document.getElementById("search");
 const cDiv = document.getElementById("coincidencias");
 const componentCarWidget = JSON.parse(localStorage.getItem("carrito")) ?? [];
 const componentProdI = document.getElementById("containerProd-i");
-
 class componentes {
   constructor(id, brand, model, category, price, tags, image) {
     ((this.id = id),
