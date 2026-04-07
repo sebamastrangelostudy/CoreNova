@@ -141,22 +141,19 @@ function displayCatalogoDOM(array) {
     containerComponents.appendChild(componentNuevoDiv);
     const addCarbtn = document.getElementById(`agregarBtn${component.id}`);
     addCarbtn.addEventListener("click", () => {
-      disabledCategory(component);
       addCar(component);
+      disabledCategory();
     });
   }
 }
 displayCatalogoDOM(catalogo);
+disabledCategory();
 
-let blockedCategories = [];
-
-function disabledCategory(item) {
-  const categoryUpper = item.category.toUpperCase();
-
-  if (!blockedCategories.includes(categoryUpper)) {
-    blockedCategories.push(categoryUpper);
-  }
-
+function disabledCategory() {
+  const car = localStorage.getItem("carrito");
+  console.log(car);
+  const carArray = JSON.parse(car);
+  const blockedCategories = carArray.map((item) => item.category.toUpperCase());
   const filteredCatalog = catalogo.filter((component) => {
     return !blockedCategories.includes(component.category.toUpperCase());
   });
@@ -167,15 +164,21 @@ function disabledCategory(item) {
   displayCatalogoDOM(filteredCatalog);
 
   filterButtons.forEach((button) => {
-    if (button.innerText.toUpperCase() === categoryUpper) {
+    const btnText = button.innerText.toUpperCase();
+
+    if (blockedCategories.includes(btnText)) {
       button.classList.add("category-disabled");
       button.disabled = true;
       button.classList.remove("com-active");
     }
   });
 }
+
 function addCar(item) {
-  let cAdd = componentCarWidget.find((component) => component.id == item.id);
+  let cAdd = componentCarWidget.find(
+    (component) =>
+      component.category.toUpperCase() == item.category.toUpperCase(),
+  );
   cAdd == undefined
     ? (componentCarWidget.push(item),
       Toastify({
@@ -187,14 +190,14 @@ function addCar(item) {
         position: "right",
         stopOnFocus: true,
         style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
+          background: "linear-gradient(to right, #96c93d, #96c93d)",
         },
         onClick: function () {},
       }).showToast(),
       localStorage.setItem("carrito", JSON.stringify(componentCarWidget)),
       console.log(componentCarWidget))
     : Toastify({
-        text: "Tu Producto ya se encuentra en el Carrito",
+        text: `Ya tienes un ${item.category} en el Carrito`,
         duration: 3000,
         newWindow: true,
         close: true,
@@ -202,8 +205,7 @@ function addCar(item) {
         position: "right",
         stopOnFocus: true,
         style: {
-          background:
-            "linear-gradient((to right, rgb(255, 95, 109), rgb(255, 195, 113)))",
+          background: "linear-gradient(to right, #ff0015, #ff0015)",
         },
         onClick: function () {},
       }).showToast();

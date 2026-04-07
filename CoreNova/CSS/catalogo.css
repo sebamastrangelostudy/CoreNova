@@ -28,9 +28,12 @@ body {
     text-transform: uppercase;
     font-size: 2.4em;
     font-weight: 900;
+    span {
+      color: var(--brand-primary);
+    }
   }
   p {
-    color: var(--text-muted);
+    color: var(--text-dim);
     font-size: 0.9em;
   }
 }
