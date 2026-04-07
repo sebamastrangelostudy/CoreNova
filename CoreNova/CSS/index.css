@@ -274,11 +274,7 @@ header {
 }
 
 .feature-card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.02),
-    rgba(255, 255, 255, 0.06)
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02),rgba(255, 255, 255, 0.06));
   border: var(--border-tech);
   border-radius: 24px;
   min-height: 300px;
@@ -338,23 +334,15 @@ header {
 }
 
 .feature-card:hover > .feature-card__animated-border {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--brand-glow),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, var(--brand-glow),transparent);
   transition: 0.3s ease;
 }
 
 /* CATALOG */
 .catalog {
+  display: flex;
+  justify-content: center;
   padding: 2.5rem 0;
-}
-
-.container__catalog {
-  margin: 0 auto;
-  max-width: 1180px;
 }
 
 .container__catalog-tittle {
@@ -372,22 +360,17 @@ header {
 .catalog__grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,auto);
 }
 
 .catalog__card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.08)
-  );
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.08));
   border: var(--border-tech);
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 0.75rem;
   text-align: center;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .catalog__card:hover {
@@ -405,9 +388,9 @@ header {
 
 .catalog__card-img {
   border-radius: 18px;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  max-height: 180px;
+  object-fit: contain;
   width: 100%;
 }
 
