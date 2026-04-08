@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 main {
-  width: 80vw;
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -36,7 +36,7 @@ main {
 }
 
 .container-main {
-  width: 80%;
+  width: 70%;
   display: flex;
   gap: 50px;
 }
@@ -150,17 +150,18 @@ main {
   }
 }
 #priceCar {
-  width: 40%;
+  width: 30%;
   background-color: var(--bg-card);
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-
+  justify-content: space-around;
   gap: 20px;
 }
 .finalResume {
   font-size: 1.8em;
   text-transform: uppercase;
+
   span {
     color: var(--brand-primary);
   }
@@ -169,10 +170,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border-bottom: 1px solid #333;
+  border-top: 1px solid #333;
+  padding: 40px 0px;
 }
 .container-prices {
   display: flex;
   justify-content: space-between;
+
   p {
     color: var(--text-dim);
   }
@@ -183,6 +188,7 @@ main {
   justify-content: space-between;
 }
 .container-efectivo {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -201,5 +207,6 @@ main {
 }
 .laletrachica {
   color: var(--text-dim);
-  font-size: 0.9em;
+  font-size: 0.8em;
+  text-align: center;
 }
