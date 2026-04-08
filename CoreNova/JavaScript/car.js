@@ -1,7 +1,9 @@
 const containerCar = document.getElementById("componentsCar");
 const containerResume = document.getElementById("priceCar");
 const carfetch = localStorage.getItem("carrito");
-const carArray = JSON.parse(carfetch);
+let carArray = JSON.parse(carfetch);
+const btnClear = document.getElementById("btnClean");
+
 console.log(carArray);
 function displayCar(array) {
   containerCar.innerHTML = "";
@@ -89,3 +91,9 @@ function displayResume(array) {
   `;
 }
 displayResume(carArray);
+btnClear.addEventListener("click", () => {
+  localStorage.removeItem("carrito");
+  carArray = [];
+  displayCar(carArray);
+  displayResume(carArray);
+});
