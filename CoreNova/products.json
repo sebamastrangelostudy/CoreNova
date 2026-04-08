@@ -6,7 +6,7 @@
     "category": "CPU",
     "price": 699,
     "tags": ["System Ready", "Top Tier"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794389/1753704960889-AMD-Ryzen-9-7950X3D-Processor-With-Radeon-Graphics-3-Photoroom_o4bjdq.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775528538/CPU-Photoroom_mpf9x8.png"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "category": "CPU",
     "price": 589,
     "tags": ["Optimized", "High Clock"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794539/1486-intel-core-i9-14900k-32-6ghz-box-comprar-Photoroom_zdx1lm.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775528371/CORE_i9-Photoroom_lr5eae.png"
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "category": "CPU",
     "price": 449,
     "tags": ["Gaming King"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794677/51HqC0rU9HL-Photoroom_nzzj9c.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775528848/DOMINATOR_DDR5-Photoroom_sano9q.png"
   },
   {
     "id": 4,
@@ -33,7 +33,7 @@
     "category": "GPU",
     "price": 1599,
     "tags": ["Optimized", "4K Ultra"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794824/88528_42_nvidia-details-new-geforce-rtx-40-series-founders-edition-cards-Photoroom_odwanf.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775528991/placaBase-MPG_B550_Gaming-Photoroom_rqfj5b.png"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "category": "GPU",
     "price": 1249,
     "tags": ["System Ready"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794905/1cf0dd5bee621695-n-Photoroom_r1yxyf.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775528541/fuente-gamerSentey850W-Photoroom_dtt1qo.png"
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "category": "RAM",
     "price": 385,
     "tags": ["7200MHz", "Optimized"],
-    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794970/31OTtutEejL-Photoroom_pcdszj.png"
+    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775529131/fuentePoder-Photoroom_qvayua.png"
   }
 ]
