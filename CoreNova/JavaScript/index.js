@@ -1,9 +1,9 @@
 const componentProdI = document.getElementById("containerProd-i");
 
 fetch("products.json")
-  .then(res => res.json())
-  .then(catalogo => {
-    catalogo.forEach(component => {
+  .then((res) => res.json())
+  .then((catalogo) => {
+    catalogo.forEach((component) => {
       const card = document.createElement("article");
       card.className = "catalog__card";
       card.setAttribute("data-id", component.id);
@@ -17,4 +17,4 @@ fetch("products.json")
       componentProdI.appendChild(card);
     });
   })
-  .catch(err => console.error("Error al cargar productos:", err));
+  .catch((err) => console.error("Error al cargar productos:", err));
