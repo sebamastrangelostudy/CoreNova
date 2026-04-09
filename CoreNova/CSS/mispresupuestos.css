@@ -82,3 +82,102 @@ main {
     letter-spacing: 1.5px;
   }
 }
+.container-historial {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.presupuesto-card {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-left: 4px solid var(--brand-primary);
+  transition: transform 0.2s ease;
+}
+
+.presupuesto-card:hover {
+  filter: brightness(1.05);
+  transform: translateX(5px);
+  color: var(--brand-primary);
+}
+
+.pres-icon {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+  color: var(--brand-primary);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+}
+
+.pres-info {
+  flex-grow: 1;
+}
+
+.pres-info h3 {
+  font-family: var(--font-header);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.pres-meta {
+  display: flex;
+  gap: 15px;
+  color: var(--text-dim);
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.pres-meta i {
+  margin-right: 5px;
+}
+
+.pres-price {
+  font-family: var(--font-header);
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.pres-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ver-detalle {
+  background-color: #8fb3ff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 0.8em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
+.delete-pres {
+  background: none;
+  border: 1px solid #333;
+  color: #ff4d4d;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.delete-pres:hover {
+  background-color: rgba(255, 77, 77, 0.1);
+  border-color: #ff4d4d;
+}
