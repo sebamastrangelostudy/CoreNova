@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>CoreNova</title>
   </head>
   <body>
     <header>
@@ -37,7 +37,7 @@
               <a href="../index.html" class="link__active">Inicio</a>
             </li>
             <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="#">Mis Presupuestos</a></li>
+            <li><a href="mispresupuestos.html">Mis Presupuestos</a></li>
           </ul>
         </div>
 
@@ -72,11 +72,49 @@
             </div>
             <div class="buttons">
                 <button id="btnClean" class="btn-bottom"><i class="bi bi-cart-x"></i> Limpiar Cotizador</button>
-                <button id="addP" class="btn-bottom"><i class="bi bi-filetype-pdf"></i> Exportar a PDF</button>
+                <button id="addP" class="btn-bottom"><i class="bi bi-floppy"></i> Guardar Presupuesto</button>
               </div>
           </div>
         <div id="priceCar">
       </div>
+<div id="login" class="modal-overlay modal-active">
+  <div class="form-container">
+    <h3>ACCESO AL <span>SISTEMA</span></h3>
+    <div class="form-flex">
+      <div class="input-group">
+        <label>PROTOCOLO DE IDENTIDAD / NOMBRE</label>
+        <input type="text" id="loginName" placeholder="ESCRIBE TU NOMBRE COMPLETO" required>
+      </div>
+      <div class="input-group">
+        <label>DIRECCIÓN DE ENLACE / EMAIL</label>
+        <input type="email" id="loginEmail" placeholder="USUARIO@CORENOVA.CORP" required>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button id="confirmLogin" class="SaveP">INICIAR SESIÓN</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalForm" class="modal-overlay">
+  <div class="form-container">
+    <h3>DATOS DEL <span>PRESUPUESTO</span></h3>
+    <div class="form-flex">
+      <div class="input-group">
+        <label>DESIGNACIÓN DEL ARCHIVO / PROYECTO</label>
+        <input type="text" id="presName" placeholder="NOMBRE DEL PRESUPUESTO" required>
+      </div>
+      <div class="input-group full-width">
+        <label>ESPECIFICACIONES TÉCNICAS / NOTAS</label>
+        <textarea id="userNotes" placeholder="DETALLES ADICIONALES DEL SISTEMA..."></textarea>
+      </div>
+    </div>
+    <div class="modal-buttons">
+      <button id="closeModal" class="btn-bottom">CANCELAR</button>
+      <button id="confirmSave" class="SaveP">GUARDAR REGISTRO</button>
+    </div>
+  </div>
+</div>
     </main>
 
     <footer class="footer">
