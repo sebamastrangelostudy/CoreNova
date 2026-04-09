@@ -1,17 +1,19 @@
 const componentProdI = document.getElementById("containerProd-i");
 
 fetch("products.json")
-  .then(res => res.json())
-  .then(catalogo => {
-    const oneForCategory = Object.values(catalogo.reduce((acc, component) => {
-      if (!acc[component.category]) {
-        acc[component.category] = component;
-      }
+  .then((res) => res.json())
+  .then((catalogo) => {
+    const oneForCategory = Object.values(
+      catalogo.reduce((acc, component) => {
+        if (!acc[component.category]) {
+          acc[component.category] = component;
+        }
 
-      return acc;
-    }, {}));
+        return acc;
+      }, {}),
+    );
 
-    oneForCategory.forEach(component => {
+    oneForCategory.forEach((component) => {
       const card = document.createElement("article");
       card.className = "catalog__card";
       card.setAttribute("data-id", component.id);
@@ -26,6 +28,4 @@ fetch("products.json")
       componentProdI.appendChild(card);
     });
   })
-  .catch(err => console.error("Error al cargar productos:", err));
-
-  
+  .catch((err) => console.error("Error al cargar productos:", err));
