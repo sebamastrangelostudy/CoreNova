@@ -349,3 +349,18 @@ main {
 .modal-active {
   display: flex;
 }
+
+.font-header-alert {
+  font-family: var(--font-header) !important;
+  letter-spacing: 2px;
+}
+
+.font-body-alert {
+  font-family: var(--font-body) !important;
+  color: var(--text-dim) !important;
+}
+
+.neon-border-alert {
+  border: 1px solid var(--brand-primary) !important;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2) !important;
+}

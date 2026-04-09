@@ -104,9 +104,54 @@ function displayResume(array) {
             <h2>$${total.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</h2>
         </div>
     </div>
-    <button id="addP" class="SaveP"><i class="bi bi-filetype-pdf"></i> EXPORTAR PDF</button>
+    <button id="exportarPDF" class="SaveP"><i class="bi bi-filetype-pdf"></i> EXPORTAR PDF</button>
     <p class="laletrachica">Cotización válida por 48 horas. Precios sujetos a disponibilidad de stock.</p>
   `;
+  let btnExportar = document.getElementById("exportarPDF");
+  if (btnExportar) {
+    btnExportar.addEventListener("click", () => {
+      if (array.length > 0) {
+        if (array.length === 8) {
+          imprimirFactura();
+        } else {
+          Swal.fire({
+            title: "CONFIGURACIÓN INCOMPLETA",
+            text: "El sistema requiere más componentes para validar la compatibilidad y finalizar el armado.",
+            icon: "info",
+            background: "#111827",
+            color: "#ffffff",
+            iconColor: "#00ffff",
+            confirmButtonText: "CONTINUAR ARMADO",
+            confirmButtonColor: "#007bff",
+
+            customClass: {
+              popup: "neon-border-alert",
+              title: "font-header-alert",
+              htmlContainer: "font-body-alert",
+            },
+
+            backdrop: `rgba(11, 15, 25, 0.7)`,
+          });
+        }
+      } else {
+        Swal.fire({
+          title: "SISTEMA DE CONTROL",
+          text: "Agrega componentes para exportar el presupuesto.",
+          icon: "warning",
+          background: "#111827",
+          color: "#ffffff",
+          iconColor: "#ff3e3e",
+          confirmButtonText: "ACEPTAR",
+          confirmButtonColor: "#007bff",
+          customClass: {
+            popup: "neon-border-alert",
+            title: "font-header-alert",
+            htmlContainer: "font-body-alert",
+          },
+        });
+      }
+    });
+  }
 
   document.getElementById("addP").addEventListener("click", () => {
     if (carArray.length > 0) {
@@ -179,3 +224,76 @@ document.addEventListener("DOMContentLoaded", () => {
   displayCar(carArray);
   displayResume(carArray);
 });
+function imprimirFactura() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  const user = JSON.parse(localStorage.getItem("neoUser")) || {
+    nombre: "INVITADO",
+    email: "S/D",
+  };
+
+  doc.setFillColor(18, 18, 18);
+  doc.rect(0, 0, 210, 40, "F");
+
+  doc.setTextColor(0, 123, 255);
+  doc.setFontSize(22);
+  doc.setFont("helvetica", "bold");
+  doc.text("CORENOVA", 20, 25);
+
+  doc.setTextColor(255, 255, 255);
+  doc.setFontSize(10);
+  doc.text("SISTEMA DE COTIZACIÓN TÉCNICA", 20, 32);
+
+  doc.setTextColor(100, 100, 100);
+  doc.setFontSize(12);
+  doc.text("DETALLES DEL OPERADOR:", 20, 55);
+
+  doc.setFont("helvetica", "normal");
+  doc.setTextColor(0, 0, 0);
+  doc.text(`Nombre: ${user.nombre}`, 20, 65);
+  doc.text(`Email: ${user.email}`, 20, 72);
+  doc.text(`Fecha: ${new Date().toLocaleDateString()}`, 150, 65);
+
+  doc.setDrawColor(200, 200, 200);
+  doc.line(20, 80, 190, 80);
+
+  doc.setFont("helvetica", "bold");
+  doc.text("PRODUCTO", 20, 90);
+  doc.text("PRECIO", 160, 90);
+  doc.line(20, 95, 190, 95);
+
+  doc.setFont("helvetica", "normal");
+  let y = 105;
+
+  carArray.forEach((item) => {
+    doc.text(`${item.brand} ${item.model}`, 20, y);
+    doc.text(`$${item.price.toLocaleString()}`, 160, y);
+    y += 10;
+  });
+
+  const subtotal = carArray.reduce((acc, item) => acc + item.price, 0);
+  const iva = subtotal * 0.16;
+  const total = subtotal + 100 + iva;
+
+  doc.line(20, y, 190, y);
+  doc.setFontSize(11);
+  doc.text(`SUBTOTAL: $${subtotal.toLocaleString()}`, 140, y + 15);
+  doc.text(`ENSAMBLADO: $100`, 140, y + 22);
+
+  doc.setFontSize(14);
+  doc.setTextColor(0, 123, 255);
+  doc.text(`TOTAL: $${total.toLocaleString()}`, 140, y + 35);
+
+  doc.setFontSize(8);
+  doc.setTextColor(150, 150, 150);
+  doc.text(
+    "Documento digital generado por el sistema CoreNova.",
+    105,
+    285,
+    null,
+    null,
+    "center",
+  );
+
+  doc.save(`Factura_CoreNova_${user.nombre}.pdf`);
+}
