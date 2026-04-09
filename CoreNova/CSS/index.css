@@ -62,6 +62,8 @@ header {
   transition: all 0.3s ease;
 }
 
+
+
 .navbar {
   padding: 0 2.5rem;
   align-items: center;
@@ -117,8 +119,12 @@ header {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.95em;
   letter-spacing: 0.1em;
-  font-weight: bold;
   transition: color 0.2s ease;
+}
+
+#link__active{
+  color: white;
+  font-weight: bold;
 }
 
 .navbar__links a:hover {
@@ -400,6 +406,29 @@ header {
   margin: 1rem 0 0;
 }
 
+.catalog__card-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--brand-primary);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid var(--brand-primary);
+}
+
+.catalog__card-btn:hover {
+  background-color: white;
+  color: var(--brand-primary);
+  transform: translateY(-2px);
+}
+
+
 /* NEWSLETTER */
 .sect-newsletter {
   display: flex;
@@ -419,7 +448,7 @@ header {
 }
 
 .newsletter__title {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.5rem;
   letter-spacing: 0.12em;
   line-height: 1.2;
