@@ -51,6 +51,78 @@
     "category": "RAM",
     "price": 385,
     "tags": ["7200MHz", "Optimized"],
-    "image": "https://res.cloudinary.com/dyufvizaz/image/upload/v1775529131/fuentePoder-Photoroom_qvayua.png"
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1774794970/31OTtutEejL-Photoroom_pcdszj.png"
+  },
+  {
+    "id": 7,
+    "brand": "SAMSUNG",
+    "model": "990 Pro 2TB NVMe Gen4",
+    "category": "DISCOS",
+    "price": 180,
+    "tags": ["Ultra Fast", "Reliable"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617361/mz-v9p2t0bw-image-2-Photoroom_rvuu6y.png"
+  },
+  {
+    "id": 8,
+    "brand": "ASUS ROG",
+    "model": "Maximus Z790 Dark Hero",
+    "category": "MOTHERBOARD",
+    "price": 650,
+    "tags": ["WiFi 7", "Overclocking"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617499/81b6EGY2FPL-Photoroom_jveovp.png"
+  },
+  {
+    "id": 9,
+    "brand": "MSI",
+    "model": "MPG X670E Carbon WiFi",
+    "category": "MOTHERBOARD",
+    "price": 460,
+    "tags": ["AM5", "PCIe 5.0"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617564/X670ECARBWIFI-1-1024x1024-Photoroom_teb6o4.png"
+  },
+  {
+    "id": 10,
+    "brand": "CORSAIR",
+    "model": "RM1000e 80+ Gold",
+    "category": "FUENTES",
+    "price": 160,
+    "tags": ["ATX 3.0", "Fully Modular"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617624/QJOl6yyvANqsZLaGlcuPSxDbzp0eZVzvXhvsOmBR-Photoroom_i8bnzi.png"
+  },
+  {
+    "id": 11,
+    "brand": "SEASONIC",
+    "model": "Prime TX-1300 Titanium",
+    "category": "FUENTES",
+    "price": 450,
+    "tags": ["Extreme", "Silent"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617773/41pDckPxvAL-Photoroom_aybdpw.png"
+  },
+  {
+    "id": 12,
+    "brand": "NZXT",
+    "model": "Kraken Elite 360 RGB",
+    "category": "REFRIGERACIÓN",
+    "price": 280,
+    "tags": ["LCD Screen", "Silent"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617830/D_Q_NP_2X_842493-MLA85664644162_062025-E-Photoroom_hbb3di.png"
+  },
+  {
+    "id": 13,
+    "brand": "LIAN LI",
+    "model": "PC-O11 Dynamic EVO",
+    "category": "GABINETES",
+    "price": 170,
+    "tags": ["Showcase", "Modular"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617878/lian_li_white_o11_dynamic_evo_rgb_prebuilt_gaming_pc_ny-Photoroom_swdxwx.png"
+  },
+  {
+    "id": 14,
+    "brand": "HYTE",
+    "model": "Y70 Touch",
+    "category": "GABINETES",
+    "price": 360,
+    "tags": ["Integrated LCD", "Aesthetic"],
+    "image": "https://res.cloudinary.com/deppiblrq/image/upload/v1775617988/780cd278718770562e1723169eb46acf79eeded8-3480x2460-Photoroom_egd9ja.png"
   }
 ]
