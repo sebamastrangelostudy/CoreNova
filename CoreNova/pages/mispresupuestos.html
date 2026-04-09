@@ -3,7 +3,141 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/mispresupuestos.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <title>CoreNova</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container__navbar-logo">
+          <span class="navbar__logo-accent"></span>
+          <h1>CoraNova</h1>
+        </div>
+
+        <div class="navbar__links">
+          <ul>
+            <li>
+              <a href="../index.html" class="link__active">Inicio</a>
+            </li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="#">Mis Presupuestos</a></li>
+          </ul>
+        </div>
+
+        <div class="navbar__btn-actions">
+          <button class="iconcar">
+            <a href="../pages/carrito.html"> <i class="bi bi-cart"></i></a>
+          </button>
+
+          <button class="iconLogin-person">
+            <i class="bi bi-person"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="containerDetailUser" id="user">
+        <img src="https://res.cloudinary.com/deppiblrq/image/upload/v1775691889/unnamed_c1xxsg.png" alt="">
+        <div class="detailUser">
+          <h2>Neo_Architect_01</h2>
+          <p>Usuario De CoreNova</p>
+          <div class="cantPres">
+            <h4>Presupuestos</h4>
+            <p class="cant">12</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-historial">
+        <div class="text-historial">
+          <h2>Historial de Presupuestos</h2>
+          <p>Gestión de configuraciones guardadas y setups personalizados.</p>
+          <div id="presupuestos">
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-accent"></span>
+            CORANOVA ARCHITECT
+          </div>
+          <p class="footer__about">
+            Autoridad técnica en hardware de alto rendimiento. Diseñamos,
+            optimizamos y entregamos la excelencia que los entusiastas demandan.
+          </p>
+
+          <div class="footer__socials">
+            <a href="#" class="footer__social-link"
+              ><span class="material-symbols-outlined">public</span></a
+            >
+            <a href="#" class="footer__social-link"
+              ><span class="material-symbols-outlined">share</span></a
+            >
+            <a href="#" class="footer__social-link"
+              ><span class="material-symbols-outlined">terminal</span></a
+            >
+          </div>
+        </div>
+
+          <div class="footer__nav-group">
+            <h5 class="footer__title">NAVEGACIÓN</h5>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Cotizador Pro</a></li>
+              <li><a href="#" class="footer__link">Catálogo GPU</a></li>
+              <li><a href="#" class="footer__link">Procesadores</a></li>
+              <li><a href="#" class="footer__link">Almacenamiento</a></li>
+            </ul>
+          </div>
+
+        <div class="footer__nav-group">
+          <h5 class="footer__title">RECURSOS</h5>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Soporte Técnico</a></li>
+            <li><a href="#" class="footer__link">Garantía Neo</a></li>
+            <li><a href="#" class="footer__link">Envíos Lab</a></li>
+            <li><a href="#" class="footer__link">Comunidad</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer__bottom">
+        <p class="footer__copyright">
+          © 2026 CORANOVA. ARCHITEC AUTHORITY // ALL RIGHTS RESERVED.
+        </p>
+        <div class="footer__legal">
+          <a href="#" class="footer__legal-link">Política de Privacidad</a>
+          <a href="#" class="footer__legal-link">Términos y condiciones</a>
+        </div>
+      </div>
+
+      </div>
+
+    </footer>
+  </body>
 </html>
