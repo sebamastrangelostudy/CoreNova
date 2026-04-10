@@ -11,19 +11,10 @@ const btnLogin = document.getElementById("confirmLogin");
 
 function verificarUsuario() {
   const userSaved = localStorage.getItem("neoUser");
-  const historial =
-    JSON.parse(localStorage.getItem("historialPresupuestos")) || [];
-
   if (!userSaved) {
     loginModal.classList.add("modal-active");
   } else {
     loginModal.classList.remove("modal-active");
-    const user = JSON.parse(userSaved);
-    const displayNombre = document.getElementById("displayNombre");
-    const numPres = document.getElementById("numPres");
-
-    if (displayNombre) displayNombre.innerText = user.nombre;
-    if (numPres) numPres.innerText = historial.length;
   }
 }
 

@@ -20,7 +20,12 @@ function displayUserInfo() {
         </div>
       `;
   } else {
-    containerUser.innerHTML = `<h3>Bienvenido, invitado</h3>`;
+    containerUser.innerHTML = `
+        <div class="detailUser">
+          <h2>Bienvenido INVITADO</h2>
+          <p>inicia sesión para guardar tus presupuestos</p>
+        </div>
+    `;
   }
 }
 

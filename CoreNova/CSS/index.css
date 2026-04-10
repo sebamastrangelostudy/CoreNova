@@ -252,7 +252,7 @@ header {
 }
 
 .features__title {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: var(--font-header);
   font-size: clamp(2rem, 3vw, 3rem);
   letter-spacing: 0.08em;
   line-height: 1.05;
